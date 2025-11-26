@@ -1,61 +1,57 @@
+"use client";
+
 import ModuleCard from "./ModuleCard";
 
-const modules: {
-  title: string;
-  desc: string;
-  href: string;
-  subdomain: string;
-  status: "live" | "coming-soon";
-}[] = [
+const modules = [
   {
-    title: "CRM System",
-    desc: "Manage leads, contacts and internal communication.",
-    href: "https://crm.odinovus.com",
-    subdomain: "crm.odinovus.com",
-    status: "coming-soon",
+    title: "App Hub",
+    desc: "Central gateway to all Odinovus applications.",
+    href: "/platform/app-hub",
+    subdomain: "app-hub.odinovus.com",
+    status: "live",
   },
   {
     title: "SaaS Platform",
-    desc: "Create and deploy scalable SaaS solutions.",
-    href: "https://saas.odinovus.com",
+    desc: "Build and deploy scalable SaaS solutions.",
+    href: "/platform/saas",
     subdomain: "saas.odinovus.com",
     status: "coming-soon",
   },
   {
     title: "AI Agents",
-    desc: "Autonomous AI systems for intelligent tasks.",
-    href: "https://agents.odinovus.com",
+    desc: "Intelligent autonomous agents for real-world tasks.",
+    href: "/platform/agents",
     subdomain: "agents.odinovus.com",
     status: "coming-soon",
   },
   {
-    title: "Analytics",
+    title: "Data & Analytics",
     desc: "Insights powered by real-time intelligence.",
-    href: "https://analytics.odinovus.com",
+    href: "/platform/analytics",
     subdomain: "analytics.odinovus.com",
     status: "coming-soon",
   },
   {
     title: "Developer Tools",
-    desc: "APIs, SDKs and integrations.",
-    href: "https://dev.odinovus.com",
-    subdomain: "dev.odinovus.com",
+    desc: "APIs & SDKs for fast integration.",
+    href: "/platform/devtools",
+    subdomain: "devtools.odinovus.com",
     status: "coming-soon",
   },
   {
-    title: "Automation",
-    desc: "Automate workflows and business logic.",
-    href: "https://automation.odinovus.com",
+    title: "Automation Layer",
+    desc: "Connect, automate, and optimize processes.",
+    href: "/platform/automation",
     subdomain: "automation.odinovus.com",
     status: "coming-soon",
   },
-];
+] as const;
 
 export default function HubGrid() {
   return (
     <section className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {modules.map((module, index) => (
-        <ModuleCard key={index} {...module} />
+      {modules.map((module, i) => (
+        <ModuleCard key={i} index={i} {...module} />
       ))}
     </section>
   );
