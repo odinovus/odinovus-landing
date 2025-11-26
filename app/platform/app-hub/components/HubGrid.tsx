@@ -1,44 +1,61 @@
-// app/platform/app-hub/components/HubGrid.tsx
 import ModuleCard from "./ModuleCard";
 
-const modules = [
+const modules: {
+  title: string;
+  desc: string;
+  href: string;
+  subdomain: string;
+  status: "live" | "coming-soon";
+}[] = [
+  {
+    title: "CRM System",
+    desc: "Manage leads, contacts and internal communication.",
+    href: "https://crm.odinovus.com",
+    subdomain: "crm.odinovus.com",
+    status: "coming-soon",
+  },
   {
     title: "SaaS Platform",
-    desc: "Build and deploy scalable SaaS solutions.",
-    href: "/platform/saas",
+    desc: "Create and deploy scalable SaaS solutions.",
+    href: "https://saas.odinovus.com",
     subdomain: "saas.odinovus.com",
+    status: "coming-soon",
   },
   {
     title: "AI Agents",
-    desc: "Intelligent autonomous agents.",
-    href: "/platform/agents",
+    desc: "Autonomous AI systems for intelligent tasks.",
+    href: "https://agents.odinovus.com",
     subdomain: "agents.odinovus.com",
+    status: "coming-soon",
   },
   {
-    title: "Data & Analytics",
-    desc: "Insights powered by intelligence.",
-    href: "/platform/analytics",
+    title: "Analytics",
+    desc: "Insights powered by real-time intelligence.",
+    href: "https://analytics.odinovus.com",
     subdomain: "analytics.odinovus.com",
+    status: "coming-soon",
   },
   {
     title: "Developer Tools",
-    desc: "APIs & SDKs for integration.",
-    href: "/platform/devtools",
-    subdomain: "devtools.odinovus.com",
+    desc: "APIs, SDKs and integrations.",
+    href: "https://dev.odinovus.com",
+    subdomain: "dev.odinovus.com",
+    status: "coming-soon",
   },
   {
-    title: "Automation Layer",
-    desc: "Connect, automate, optimize processes.",
-    href: "/platform/automation",
+    title: "Automation",
+    desc: "Automate workflows and business logic.",
+    href: "https://automation.odinovus.com",
     subdomain: "automation.odinovus.com",
+    status: "coming-soon",
   },
 ];
 
 export default function HubGrid() {
   return (
-    <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10 mx-auto max-w-7xl px-6 py-16">
-      {modules.map((m, i) => (
-        <ModuleCard key={i} {...m} />
+    <section className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {modules.map((module, index) => (
+        <ModuleCard key={index} {...module} />
       ))}
     </section>
   );

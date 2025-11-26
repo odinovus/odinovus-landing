@@ -1,11 +1,10 @@
-// app/platform/app-hub/components/HubHeader.tsx
 export default function HubHeader() {
   return (
-    <header className="text-center py-16 px-6 max-w-7xl mx-auto">
-      <h1 className="text-4xl font-bold text-white">Odinovus — App Hub</h1>
-      <p className="mt-3 text-zinc-400 max-w-2xl mx-auto">
-        Central place for all Odinovus products. Click a module to explore or
-        deploy a sub-app.
+    <header className="mb-14 text-center">
+      <h1 className="text-4xl font-bold tracking-tight">Odinovus — App Hub</h1>
+      <p className="mx-auto mt-4 max-w-2xl text-zinc-400">
+        Central gateway to all Odinovus applications. From here you can access,
+        manage and launch every connected platform in the Odinovus ecosystem.
       </p>
     </header>
   );
