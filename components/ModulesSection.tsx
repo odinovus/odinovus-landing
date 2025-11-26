@@ -22,11 +22,14 @@ const modules = [
 
 export default function ModulesSection() {
   return (
-    <section id="modules" className="mx-auto max-w-7xl px-6 py-24">
+    <section
+      id="modules"
+      className="mx-auto max-w-7xl px-6 py-24 pt-32 scroll-mt-28"
+    >
+      {" "}
       <h2 className="mb-16 text-center text-4xl font-bold text-white">
         Odinovus Modules
       </h2>
-
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {modules.map((module, i) => (
           <div

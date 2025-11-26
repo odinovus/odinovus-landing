@@ -22,16 +22,19 @@ const roadmap = [
 
 export default function RoadmapSection() {
   return (
-    <section id="roadmap" className="mx-auto max-w-7xl px-6 py-24">
+    <section
+      id="roadmap"
+      className="mx-auto max-w-7xl px-6 py-24 pt-32 scroll-mt-28"
+    >
+      {" "}
       <h2 className="mb-16 text-center text-4xl font-bold text-white">
         Roadmap
       </h2>
-
       <div className="relative mx-auto max-w-4xl space-y-12">
         {roadmap.map((item, i) => (
           <div key={i} className="relative flex items-start gap-6">
             {/* Dot */}
-            <span className="mt-1 block h-4 w-4 flex-shrink-0 rounded-full bg-[#00B4D8]"></span>
+            <span className="mt-1 block h-4 w-4 shrink-0 rounded-full bg-[#00B4D8]"></span>
 
             {/* Text */}
             <div>
